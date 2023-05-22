@@ -346,6 +346,7 @@ exports[`Render successfully renders App sucessfully 1`] = `
                               "marginBottom": 10,
                             }
                           }
+                          testID="textHome"
                         >
                           Voce não está logado!
                         </Text>

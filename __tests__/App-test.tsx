@@ -8,5 +8,15 @@ describe('Render successfully', () => {
     const { toJSON } = render(<App/>);
 
     expect(toJSON()).toMatchSnapshot();
-  })
+  });
+
+  it('renders home components sucessfully', async () => {
+    const { getByText, getByTestId } = render(<App/>);
+
+    const button = await getByText('Entrar');
+    const TitleHome = await getByTestId('textHome');
+
+    expect(button).toBeTruthy();
+    expect(TitleHome).toBeTruthy();
+  });
 });

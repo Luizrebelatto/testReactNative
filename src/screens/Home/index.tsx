@@ -18,6 +18,7 @@ export default function Home(){
                     fontSize: 18,
                     marginBottom: 10
                 }}
+                testID='textHome'
             >
                 Voce não está logado!
             </Text>
