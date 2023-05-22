@@ -1,7 +1,12 @@
 import React from 'react';
 
 import { render, fireEvent, act } from '@testing-library/react-native';
+import nock from 'nock'; 
 import App from '../App';
+
+nock('https://api.github.com ').get('/users/luizrebelatto').reply(200, {
+  name: 'Luiz Gabriel'
+});
 
 describe('Render successfully', () => {
   it('renders App sucessfully', () => {
