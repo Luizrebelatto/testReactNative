@@ -348,7 +348,7 @@ exports[`Render successfully renders App sucessfully 1`] = `
                           }
                           testID="textHome"
                         >
-                          Voce não está logado!
+                          Voce não está logado
                         </Text>
                         <View
                           accessibilityState={
@@ -370,7 +370,7 @@ exports[`Render successfully renders App sucessfully 1`] = `
                           }
                           accessible={true}
                           collapsable={false}
-                          focusable={false}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}

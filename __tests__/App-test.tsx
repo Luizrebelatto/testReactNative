@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { render } from '@testing-library/react-native';
+import { render, fireEvent } from '@testing-library/react-native';
 import App from '../App';
 
 describe('Render successfully', () => {
@@ -18,5 +18,17 @@ describe('Render successfully', () => {
 
     expect(button).toBeTruthy();
     expect(TitleHome).toBeTruthy();
+  });
+
+  it('renders home components sucessfully', async () => {
+    const { getByText } = render(<App/>);
+
+    const button = await getByText('Entrar');
+
+    await getByText('Voce não está logado');
+
+    fireEvent.press(button);
+
+    await getByText('Voce está logado');
   });
 });

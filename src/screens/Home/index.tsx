@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, SafeAreaView, TouchableOpacity } from 'react-native';
 
 export default function Home(){
+    const [text, setText] = useState('Voce não está logado');
+
     return (
         <SafeAreaView
             style={{
@@ -20,10 +22,11 @@ export default function Home(){
                 }}
                 testID='textHome'
             >
-                Voce não está logado!
+                {text}
             </Text>
             <TouchableOpacity
-                style={[
+                onPress={() => setText('Voce está logado')}
+                style={
                     {
                         height: 40,
                         width: 140,
@@ -33,7 +36,7 @@ export default function Home(){
                         marginBottom: 10,
                         borderRadius: 4
                     }
-                ]}
+                }
             >
                 <Text style={{ color: '#fff', fontSize: 18 }}>Entrar</Text>
             </TouchableOpacity>
