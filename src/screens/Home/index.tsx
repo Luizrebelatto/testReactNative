@@ -4,6 +4,12 @@ import { Text, SafeAreaView, TouchableOpacity } from 'react-native';
 export default function Home(){
     const [text, setText] = useState('Voce não está logado');
 
+    async function getUser() {
+        const result = await fetch('https://api.github.com/users/luizrebelatto');
+        const data = await result.json();
+        setText(data.name);
+    }
+
     return (
         <SafeAreaView
             style={{
@@ -25,7 +31,7 @@ export default function Home(){
                 {text}
             </Text>
             <TouchableOpacity
-                onPress={() => setText('Voce está logado')}
+                onPress={getUser }
                 style={
                     {
                         height: 40,
