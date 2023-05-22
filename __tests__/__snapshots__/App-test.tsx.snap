@@ -402,6 +402,67 @@ exports[`Render successfully renders App sucessfully 1`] = `
                             Entrar
                           </Text>
                         </View>
+                        <Text
+                          style={
+                            {
+                              "color": "#fff",
+                              "fontSize": 18,
+                              "marginBottom": 10,
+                            }
+                          }
+                        />
+                        <View
+                          accessibilityState={
+                            {
+                              "busy": undefined,
+                              "checked": undefined,
+                              "disabled": undefined,
+                              "expanded": undefined,
+                              "selected": undefined,
+                            }
+                          }
+                          accessibilityValue={
+                            {
+                              "max": undefined,
+                              "min": undefined,
+                              "now": undefined,
+                              "text": undefined,
+                            }
+                          }
+                          accessible={true}
+                          collapsable={false}
+                          focusable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            {
+                              "alignItems": "center",
+                              "backgroundColor": "red",
+                              "borderRadius": 4,
+                              "height": 40,
+                              "justifyContent": "center",
+                              "marginBottom": 10,
+                              "opacity": 1,
+                              "width": 140,
+                            }
+                          }
+                        >
+                          <Text
+                            style={
+                              {
+                                "color": "#fff",
+                                "fontSize": 18,
+                              }
+                            }
+                          >
+                            Mostrar Usuario
+                          </Text>
+                        </View>
                       </RCTSafeAreaView>
                     </View>
                   </View>

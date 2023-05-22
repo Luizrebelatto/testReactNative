@@ -25,26 +25,24 @@ describe('Render successfully', () => {
     expect(TitleHome).toBeTruthy();
   });
 
-  //it('renders home components sucessfully', async () => {
-    //const { getByText } = render(<App/>);
-
-    //const button = await getByText('Entrar');
-
-    //await getByText('Voce não está logado');
-
-    //fireEvent.press(button);
-
-    //await getByText('Voce está logado');
-  //});
-
-  it('call github api when user clicked login button', async () => {
+  it('renders home components sucessfully', async () => {
     const { getByText } = render(<App/>);
 
     const button = await getByText('Entrar');
 
-    await act(() => fireEvent.press(button)); 
+    await getByText('Voce não está logado');
 
-    
+    fireEvent.press(button);
+
+    await getByText('Voce está logado');
+  });
+
+  it('call github api when user clicked login button', async () => {
+    const { getByText } = render(<App/>);
+
+    const button = await getByText('Mostrar Usuario');
+
+    await act(() => fireEvent.press(button)); 
 
     jest.advanceTimersByTime(1000);
 
